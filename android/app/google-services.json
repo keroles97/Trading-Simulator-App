@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "95428139478",
+    "firebase_url": "https://crypto-currency-6c754-default-rtdb.firebaseio.com",
+    "project_id": "crypto-currency-6c754",
+    "storage_bucket": "crypto-currency-6c754.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95428139478:android:f8923fefc565ff5d13ec77",
+        "android_client_info": {
+          "package_name": "com.crypto.currency.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95428139478-lrrnre757bgqvk9c2ti6afd7393h20kd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8vB0cQQoXRBstVTmW8zJXZob0803I6fY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95428139478-lrrnre757bgqvk9c2ti6afd7393h20kd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
