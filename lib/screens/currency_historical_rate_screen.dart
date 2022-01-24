@@ -27,6 +27,7 @@ class _CurrencyHistoricalRateScreenState
     extends State<CurrencyHistoricalRateScreen> {
   bool _isChartsLoaded = false;
   List<CurrencyHistoricalRateModel> _currencyData = [];
+  List<CurrencyHistoricalRateModel> _currencyDataReversed = [];
 
   @override
   void initState() {
@@ -34,7 +35,8 @@ class _CurrencyHistoricalRateScreenState
         .dailyHistoricalRate(widget.currency)!
         .then((value) {
       setState(() {
-        _currencyData = value.reversed.toList();
+        _currencyData = value;
+        _currencyDataReversed = value.reversed.toList();
         _isChartsLoaded = true;
       });
     });
@@ -105,7 +107,7 @@ class _CurrencyHistoricalRateScreenState
                                               currency.value)
                                 ])),
                       VerticalSpace(size: size, percentage: 0.03),
-                      if (_currencyData.isNotEmpty)
+                      if (_currencyDataReversed.isNotEmpty)
                         Container(
                           alignment: Alignment.center,
                           height: size.height * .37,
@@ -114,7 +116,7 @@ class _CurrencyHistoricalRateScreenState
                           child: ListView.builder(
                               shrinkWrap: true,
                               reverse: false,
-                              itemCount: _currencyData.length,
+                              itemCount: _currencyDataReversed.length,
                               itemBuilder: (ctx, i) {
                                 return Container(
                                   alignment: Alignment.center,
@@ -133,7 +135,7 @@ class _CurrencyHistoricalRateScreenState
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        _currencyData[i]
+                                        _currencyDataReversed[i]
                                             .date
                                             .toString()
                                             .replaceAll('00:00:00.000', ''),
@@ -141,7 +143,7 @@ class _CurrencyHistoricalRateScreenState
                                             fontSize: size.width * .04),
                                       ),
                                       Text(
-                                        '${_currencyData[i].value} / 1\$',
+                                        '${_currencyDataReversed[i].value} / 1\$',
                                         style: TextStyle(
                                             fontSize: size.width * .04),
                                       )

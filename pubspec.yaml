@@ -2,7 +2,7 @@ name: app
 description: A new Flutter project.
 publish_to: 'none'
 
-version: 1.0.5+5
+version: 1.0.6+6
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -20,9 +20,6 @@ dependencies:
   # third parts
   provider: ^6.0.0
   flutter_colorpicker: ^0.6.0
-  flutter_rating_bar: ^4.0.0
-  carousel_slider: ^4.0.0
-  fluttertoast: ^8.0.8
   syncfusion_flutter_charts: ^19.3.57
   syncfusion_flutter_pdfviewer: ^19.4.41-beta
   # firebase
